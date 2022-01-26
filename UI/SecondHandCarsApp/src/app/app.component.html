@@ -1,0 +1,19 @@
+
+
+<mat-toolbar>
+  <span>Second-Hand Cars</span>
+  <span >
+  <button mat-button [matMenuTriggerFor]="menu"  >View</button>
+</span>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="home" >View All Cars</button>
+    <button mat-menu-item>View Ware Houses</button>
+  </mat-menu>
+
+  
+</mat-toolbar>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
