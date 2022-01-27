@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CarService } from 'src/app/Services/car.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,19 +9,31 @@ import { CarService } from 'src/app/Services/car.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private carService: CarService) { }
+  AllCarDetails : any[] = [];
+  
+
+  constructor(private carService: CarService, private router : Router) { }
 
   ngOnInit(): void {
+    this.getAllCarDetails();
+  }
+
+  // get all car detaisl along with warehouse
+  getAllCarDetails(){
+
+    this.AllCarDetails = [];
+    this.carService.getAllCardData()
+     .subscribe(data=> {
+         this.AllCarDetails = data;
+     });
+    
   }
 
 
-  getAllCarDetails(){
-    let detVal = "";
-     this.carService.getAllCardData()
-     .subscribe(event=> {
-        let det = event;
-     })
-    let test = detVal;
+  // navigate to cars component
+  nagivateToCars ()
+  {
+    this.router.navigate(['cars']);
   }
 
 }

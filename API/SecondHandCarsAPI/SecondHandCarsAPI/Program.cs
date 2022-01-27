@@ -18,6 +18,12 @@ builder.Services.AddAuthorization(options =>
     options.FallbackPolicy = options.DefaultPolicy;
 });
 
+builder.Services.AddCors(options => {
+    options.AddDefaultPolicy(builder => {
+        builder.AllowAnyOrigin();
+    });
+});
+
 
 
 var app = builder.Build();
@@ -33,6 +39,8 @@ app.UseHttpsRedirection();
 
 //app.UseAuthentication();
 //app.UseAuthorization();
+
+app.UseCors();
 app.MapControllers();
 
 app.UseRouting();

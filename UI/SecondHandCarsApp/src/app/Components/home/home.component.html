@@ -1,8 +1,9 @@
-<p>home works!</p>
+<mat-grid-list cols="2" rowHeight="2:1">
 
-<mat-grid-list cols="1" rowHeight="4.5:1">
-    <mat-grid-tile (click) = "getAllCarDetails()"> 1</mat-grid-tile>
-    <mat-grid-tile>2</mat-grid-tile>
-    <mat-grid-tile>3</mat-grid-tile>
-    <mat-grid-tile>4</mat-grid-tile>
+  <ul *ngFor =" let item of AllCarDetails" >
+    <mat-grid-tile (click) = "nagivateToCars()" > {{item.name}}</mat-grid-tile>
+  </ul>
+    
   </mat-grid-list>
+
+  <router-outlet></router-outlet>

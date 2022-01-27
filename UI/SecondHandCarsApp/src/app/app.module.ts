@@ -12,11 +12,14 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http';
+import { CarService } from './Services/car.service';
+import { CarsComponent } from './Components/cars/cars.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    CarsComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,7 @@ import { HttpClientModule } from '@angular/common/http';
   exports: [
     MatSidenavModule
   ],
-  providers: [HttpClientModule],
+  providers: [HttpClientModule,CarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
