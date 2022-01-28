@@ -6,12 +6,9 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./cars.component.css']
 })
 export class CarsComponent implements OnInit {
-  @Input() AllCarDetails : any [] =[];
+  @Input() modelname : any ;
 
   constructor() { }
-
- 
-
 
   ngOnInit(): void {
   }

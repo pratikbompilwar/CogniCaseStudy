@@ -9,7 +9,11 @@ export class CarService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getAllCardData():Observable<any>{
+  getAllCarsData():Observable<any>{
+    return this.httpClient.get("https://localhost:7158/getalldata");
+  }
+
+  getAllVehicleData():Observable<any>{
     return this.httpClient.get("https://localhost:7158/getallcars");
   }
 }

@@ -14,12 +14,14 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http';
 import { CarService } from './Services/car.service';
 import { CarsComponent } from './Components/cars/cars.component';
+import { SortPipe } from './Pipes/sort.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CarsComponent
+    CarsComponent,
+    SortPipe
   ],
   imports: [
     BrowserModule,

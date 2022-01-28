@@ -16,7 +16,7 @@ namespace SecondHandCarsAPI.Controllers
 
         [Route("getallcars")]
         [HttpGet]
-        public List<JCars.WareHouse> Get()
+        public List<JCars.Vehicle> Get()
         {
            
             var result = CarsManager.GetAllCars();
@@ -24,7 +24,17 @@ namespace SecondHandCarsAPI.Controllers
             return result;
         }
 
-        
+        [Route("getalldata")]
+        [HttpGet]
+        public List<JCars.WareHouse> GetAllData()
+        {
+
+            var result = CarsManager.GetAllData();
+
+            return result;
+        }
+
+
 
     }
 }

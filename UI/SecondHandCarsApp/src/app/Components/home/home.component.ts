@@ -10,21 +10,34 @@ import {Router} from '@angular/router';
 export class HomeComponent implements OnInit {
 
   AllCarDetails : any[] = [];
+  AllVehicleDetails : any[] = [];
   
 
   constructor(private carService: CarService, private router : Router) { }
 
   ngOnInit(): void {
     this.getAllCarDetails();
+    this.getAllVehicleDetails();
   }
 
-  // get all car detaisl along with warehouse
+  // get all warehouse details along with cars
   getAllCarDetails(){
 
     this.AllCarDetails = [];
-    this.carService.getAllCardData()
+    this.carService.getAllCarsData()
      .subscribe(data=> {
          this.AllCarDetails = data;
+     });
+    
+  }
+
+  // get all vehicle details along with warehouse
+  getAllVehicleDetails(){
+
+    this.AllVehicleDetails = [];
+    this.carService.getAllVehicleData()
+     .subscribe(data=> {
+         this.AllVehicleDetails = data;
      });
     
   }
