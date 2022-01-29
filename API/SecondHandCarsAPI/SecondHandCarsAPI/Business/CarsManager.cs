@@ -6,7 +6,10 @@ namespace SecondHandCarsAPI.Business
 {
     public static class CarsManager
     {
-
+        /// <summary>
+        /// gets all cars data
+        /// </summary>
+        /// <returns></returns>
         public static List<JCars.Vehicle> GetAllCars()
         {           
 
@@ -31,6 +34,10 @@ namespace SecondHandCarsAPI.Business
 
         }
 
+        /// <summary>
+        /// gets all warehouse data
+        /// </summary>
+        /// <returns></returns>
         public static List<JCars.WareHouse> GetAllData()
         {
 

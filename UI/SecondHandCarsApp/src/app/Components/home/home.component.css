@@ -3,10 +3,7 @@ mat-grid-tile {
     justify-content: left;
   }
 
-  ::ng-deep mat-grid-tile .mat-figure {
-    
-    justify-content: left;  /*horizontal alignment*/
-}
+  
 
   .car-list{
     
@@ -15,5 +12,7 @@ mat-grid-tile {
     font-family:sans-serif;
     
   }
+
+  
 
   

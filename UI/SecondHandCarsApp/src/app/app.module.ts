@@ -14,14 +14,14 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http';
 import { CarService } from './Services/car.service';
 import { CarsComponent } from './Components/cars/cars.component';
-import { SortPipe } from './Pipes/sort.pipe';
+import { SortByPipe } from './Pipes/sort.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CarsComponent,
-    SortPipe
+    SortByPipe
   ],
   imports: [
     BrowserModule,
@@ -36,7 +36,8 @@ import { SortPipe } from './Pipes/sort.pipe';
     HttpClientModule
   ],
   exports: [
-    MatSidenavModule
+    MatSidenavModule,
+    SortByPipe
   ],
   providers: [HttpClientModule,CarService],
   bootstrap: [AppComponent]

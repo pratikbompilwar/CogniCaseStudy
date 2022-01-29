@@ -24,6 +24,9 @@ namespace SecondHandCarsAPI.Controllers
             return result;
         }
 
+        // GET: api/<CarsController>
+        // Gets all the  warehouse data
+
         [Route("getalldata")]
         [HttpGet]
         public List<JCars.WareHouse> GetAllData()

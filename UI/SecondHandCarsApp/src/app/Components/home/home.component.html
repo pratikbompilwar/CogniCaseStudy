@@ -1,10 +1,11 @@
-<mat-grid-list cols="1" rowHeight="25:1">
+<mat-grid-list cols="1" rowHeight="25:1" >
 
-  <ul *ngFor =" let item of AllVehicleDetails | sortBy:'desc': 'item.date_added'">
-    <mat-grid-tile (click) = "nagivateToCars()" class="car-tile">    
+  <ul *ngFor =" let item of AllVehicleDetails | sortBy:'desc': 'date_added'" >
+    <mat-grid-tile (click) = "nagivateToCars()" class="car-tile" >    
     
-      <div >
-        <h2>{{item.model}}</h2>     <div>Price : {{item.price}} , added on {{item.date_added}}</div>
+      <div style="justify-content: left !important;">
+        
+        <h2>Car : {{item.model}}</h2>     <div>Price : {{item.price}} , added on {{item.date_added}}</div>
         
     </div>
     
